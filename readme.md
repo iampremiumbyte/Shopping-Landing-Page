@@ -18,4 +18,4 @@ Mobile:
 
 Desktop:
 
-![My Image](/img/demo/desktop.png.png)
+![My Image](/img/demo/desktop.png)
