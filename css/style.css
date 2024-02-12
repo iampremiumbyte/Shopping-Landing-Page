@@ -1,0 +1,771 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.bars {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.5em;
+    height: 1.5em;
+    position: absolute;
+    right: 1em;
+    top: 1.2em;
+    cursor: pointer;
+}
+
+.bars div {
+    width: 100%;
+    height: .2em;
+    background-color: #000;
+    transition: .5s;
+}
+
+.open-menu {
+    top: 2em;
+}
+
+.open-menu~.mobile-menu {
+    display: flex;
+}
+
+.open-menu .line1,
+.open-menu .line2 {
+    position: absolute;
+}
+
+.open-menu .line1 {
+    transform: rotate(45deg);
+}
+
+.open-menu .line2 {
+    transform: rotate(-45deg);
+}
+
+.open-menu .line3 {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    width: 90%;
+    top: .8em;
+    left: 5%;
+    border-radius: 5px;
+    z-index: 10;
+    background-color: #fff;
+    box-shadow: 1px 1px 10px #000;
+}
+
+.mobile-menu {
+    display: none;
+    margin-top: 3em;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-menu a {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.6em;
+}
+
+.desktop-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em 0;
+}
+
+.desktop-menu {
+    display: flex;
+    align-items: center;
+}
+
+.desktop-menu a {
+    margin-right: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .8s;
+}
+
+.desktop-menu a:hover {
+    color: #7C7C7C;
+}
+
+.desktop-menu a.signup {
+    background-color: #000;
+    padding: .5em 1em;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.desktop-menu a.signup:hover {
+    background-color: #7C7C7C;
+}
+
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    padding: 2em;
+    padding-bottom: 0;
+    border-radius: 10px;
+    margin: 2em auto;
+    background-color: #E7E6E6;
+}
+
+.hero-container h1 {
+    font-size: 4em;
+    font-weight: 1000;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    max-width: 7em;
+}
+
+.hero-container h1 .w-text {
+    background-color: #ffffffb2;
+    display: block;
+    padding: 0 .5em;
+    transform: skew(-10deg);
+    transform: rotate(-3deg);
+    width: 4em;
+}
+
+.hero-container h1 .w-text span {
+    display: block;
+    transform: skew(10deg);
+    transform: rotate(3deg);
+    padding-top: .3em;
+}
+
+.hero-container h1 .w-text:nth-child(2) {
+    background-color: #EBD96B;
+    width: 5em;
+}
+
+.hero-container p {
+    font-weight: 500;
+    margin: 1em;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+}
+
+.action-btn-wrap {
+    display: flex;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.action-btn-wrap img {
+    width: 8em;
+}
+
+.action-btn-wrap a {
+    position: relative;
+    text-decoration: none;
+    background-color: #000;
+    padding: 1em 2em;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 2em;
+    transition: .8s;
+}
+
+
+.action-btn-wrap a:hover {
+    background-color: #EBD96B;
+    color: #000;
+}
+
+.hero-container .img-wrap {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin-bottom: -3em;
+}
+
+.hero-container .img-wrap img {
+    width: 30em;
+}
+
+.brands {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EBD96B;
+    padding: 1em 0;
+}
+
+.brands img {
+    width: 8em;
+}
+
+.arrivals {
+    margin-top: 2em;
+}
+
+.section-title h2 {
+    font-weight: 1000;
+    font-size: 1.8em;
+    text-transform: uppercase;
+}
+
+.section-title {
+    display: flex;
+    position: relative;
+}
+
+.section-title img {
+    position: absolute;
+    width: 10em;
+    height: 2em;
+    bottom: .4em;
+    left: 6em;
+    z-index: -1;
+}
+
+.models {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.models .item {
+    width: 31%;
+}
+
+.models .frame {
+    position: relative;
+    width: 100%;
+    height: 33em;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.models .model-content img {
+    width: 100%;
+    transition: 1s;
+}
+
+.models .model-content img:hover {
+    transform: scale(1.2);
+}
+
+.models h4 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.models p {
+    font-weight: bold;
+    color: gray;
+}
+
+.clothes-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.clothes-detail .arrow-icon img {
+    width: 2em;
+}
+
+.payday-container {
+    margin-top: 3em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E0C340;
+}
+
+.payday-container img {
+    width: 50%;
+}
+
+.payday-container .content {
+    width: 50%;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.payday-container .content h2 {
+    font-size: 5em;
+    text-transform: uppercase;
+    font-weight: 1000;
+    line-height: 1.4em;
+}
+
+.payday-container h2 .w-text {
+    background-color: #ffffff;
+    display: block;
+    transform: skew(-1deg);
+    transform: rotate(-2deg);
+    width: 4.8em;
+    padding-left: .1em;
+}
+
+.payday-container h2 .w-text span {
+    display: block;
+    transform: skew(1deg);
+    transform: rotate(1deg);
+}
+
+.payday-container .action-btn-wrap a {
+    margin-left: 0;
+}
+
+.payday-container p {
+    font-size: 1.4em;
+    max-width: 20em;
+    margin: .5em 0;
+}
+
+.payday-container h4 {
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+.favourite {
+    margin-top: 2em;
+}
+
+.favourite h2 {
+    margin: 2em 0;
+    text-transform: capitalize !important;
+}
+
+.favourite .item {
+    width: 48%;
+}
+
+.favourite .section-title img {
+    left: 10em;
+    bottom: 3em;
+}
+
+.favourite .frame {
+    height: 100%;
+}
+
+.favourite .models .model-content img:hover {
+    transform: none;
+}
+
+.download {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4em;
+}
+
+.download content {
+    width: 50%;
+}
+
+.download h3 {
+    font-size: 2em;
+    font-weight: 1000;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    max-width: 10em;
+}
+
+.download p {
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 2em;
+    max-width: 20em;
+    color: #7C7C7C;
+}
+
+.download .stores {
+    display: flex;
+    align-items: center;
+}
+
+.download .stores img {
+    width: 10em;
+    margin-right: 1em;
+}
+
+.download .mobile-app {
+    width: 38%;
+}
+
+.join {
+    background-color: #E5C643;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3em 1em;
+    text-align: center;
+}
+
+.join .container {
+    max-width: 600px;
+}
+
+.join h4 {
+    font-size: 2em;
+    font-weight: 1000;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.join p {
+    color: #fff;
+    margin: 1.3em 0;
+}
+
+.join .form-group {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: .5em;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.join .form-group input {
+    width: 69%;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: .5em;
+}
+
+.join .form-group button {
+    width: 30%;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #000;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+footer h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+footer .brand-container {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .brand-container p {
+    color: gray;
+    font-weight: light;
+    font-size: .8em;
+    margin-top: 1em;
+}
+
+footer .socials {
+    display: flex;
+    margin-top: 2em;
+}
+
+footer .socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    width: 1.8em;
+    height: 1.8em;
+    margin-right: .5em;
+    border-radius: 5px;
+    background-color: #E0C340;
+    transition: .8s;
+}
+
+footer .socials a:hover {
+    background-color: gray;
+}
+
+footer .socials img {
+    width: 1.2em;
+}
+
+footer .socials img.facebook {
+    width: .7em;
+}
+
+footer .menu-links {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .menu-links a,
+footer .menu-links p {
+    color: #fff;
+    font-size: .8em;
+    font-weight: lighter;
+    margin-bottom: .6em;
+}
+
+footer .menu-links p {
+    font-weight: 400;
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding: 0 1em;
+    }
+
+    .hero-container {
+        margin-top: 0;
+    }
+
+    .bars {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .desktop-nav img {
+        width: 10em;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    .hero-container .img-wrap {
+        margin-bottom: 1em;
+    }
+
+    .hero-container .img-wrap img {
+        width: 80vw;
+    }
+
+    .hero-container h1 {
+        width: 100%;
+        font-size: 1.8em;
+        max-width: 100%;
+        margin-top: 2em;
+        line-height: 2em;
+        padding: .4em;
+        text-align: center;
+    }
+
+    .hero-container p {
+        text-align: center;
+    }
+
+    .hero-container .action-btn-wrap {
+        text-align: center;
+    }
+
+    .hero-container h1 .w-text,
+    .hero-container h1 .w-text span {
+        display: inline-block;
+    }
+
+    .brands img {
+        width: 3.5em;
+    }
+
+    .section-title h2 {
+        font-size: 1.2em;
+    }
+
+    .section-title img {
+        width: 6em;
+        left: 6em;
+    }
+
+    .models {
+        flex-direction: column;
+    }
+
+    .models .item {
+        width: 95%;
+        margin: 1em auto;
+    }
+
+    .models h4 {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+    .models p {
+        font-weight: 600;
+        color: gray;
+    }
+
+    .payday-container {
+        margin-top: 3em;
+        padding: 1em;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #E0C340;
+    }
+
+    .payday-container img {
+        width: 70%;
+    }
+
+    .payday-container .content {
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .payday-container .content h2 {
+        font-size: 1.5em;
+    }
+
+    .payday-container h2 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .payday-container p {
+        text-align: center;
+        max-width: 100%;
+        font-size: 1em;
+    }
+
+    .payday-container h4 {
+        font-size: 1.2em;
+    }
+
+    .payday-container .w-text {
+        margin-right: .5em;
+    }
+
+    .action-btn-wrap {
+        display: block;
+        margin: 2em auto;
+    }
+
+    .favourite .section-title img {
+        left: 8em;
+        bottom: 0;
+    }
+
+    .favourite h2 {
+        margin: 0;
+    }
+
+    .download {
+        margin-top: 2em;
+        flex-direction: column-reverse;
+    }
+
+    .download .content,
+    .download .mobile-app {
+        width: 80%;
+        text-align: center;
+    }
+
+    .download h3 {
+        font-size: 1.4em;
+        max-width: 100%;
+    }
+
+    .download p {
+        max-width: 100%;
+    }
+
+    .download .stores img {
+        width: 7em;
+        margin-right: 1em;
+    }
+
+    .download .stores {
+        justify-content: center;
+    }
+
+    .join {
+        padding: 2em .5em;
+        margin-top: 2em;
+    }
+
+    .join .container {
+        max-width: 90%;
+    }
+
+    .join h4 {
+        font-size: 1.2em;
+        font-weight: 1000;
+    }
+
+    .join p {
+        color: #fff;
+        margin: 1em 0;
+    }
+
+    .join .form-group {
+        width: 100%;
+        padding: .5em;
+    }
+
+    footer .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    footer .brand-container,
+    footer .menu-links {
+        margin-bottom: 2em;
+        width: 48%;
+    }
+}
