@@ -13,7 +13,9 @@ https://shopping-landing-page-three.vercel.app/
 Screenshots
 
 Mobile:
+
 ![My Image](/img/demo/mobile.png)
 
 Desktop:
+
 ![My Image](/img/demo/desktop.png.png)
